@@ -1,0 +1,80 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  background-color: black;
+}
+
+#g {
+  background-color: rgb(22, 22, 22);
+}
+#w {
+  background-color: lightgray;
+}
+#r {
+  background-color: red;
+}
+#o {
+  background-color: orange;
+}
+#y {
+  background-color: yellow;
+}
+#gn {
+  background-color: green;
+}
+#b {
+  background-color: blue;
+}
+#p {
+  background-color: purple;
+}
+
+.hole-border {
+  width: 50px;
+  height: 50px;
+}
+
+.hole-border div {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  margin-top: 5px;
+}
+.hole {
+}
+
+#w.on {
+  background-color: white;
+  box-shadow: 0px 0px 20px white;
+}
+
+#r.on {
+  background-color: lighten(red, 10%);
+  box-shadow: 0px 0px 20px lighten(red, 20%);
+}
+
+#o.on {
+  background-color: lighten(orange, 10%);
+  box-shadow: 0px 0px 20px lighten(orange, 20%);
+}
+
+#y.on {
+  background-color: lighten(yellow, 10%);
+  box-shadow: 0px 0px 20px lighten(yellow, 20%);
+}
+
+#gn.on {
+  background-color: lighten(green, 10%);
+  box-shadow: 0px 0px 20px lighten(green, 20%);
+}
+
+#b.on {
+  background-color: lighten(blue, 10%);
+  box-shadow: 0px 0px 20px lighten(blue, 20%);
+}
+
+#p.on {
+  background-color: lighten(purple, 10%);
+  box-shadow: 0px 0px 20px lighten(purple, 20%);
+}
