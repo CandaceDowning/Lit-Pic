@@ -1,6 +1,6 @@
 import React from "react";
-// import "../Colors/colors.css";
 
+//returns a 'tray' of colors to select from
 const Colors = props => {
   return (
     <div className='colors-main'>

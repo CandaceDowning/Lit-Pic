@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import "../PegBoard/peg-board.css";
 
 class PegBoard extends Component {
   constructor() {
@@ -9,6 +8,7 @@ class PegBoard extends Component {
     };
   }
 
+  //turns the 'light' on and off which modifies the selector to include a box shadow and lightens the color of the 'pegs'
   onOrOff = () => {
     console.log(this.state.onOrOff);
     this.setState({ onOrOff: !this.state.onOrOff });
