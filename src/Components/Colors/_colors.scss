@@ -1,37 +1,54 @@
-.peg {
-  width: 65px;
-  height: 65px;
-  border: 1px solid black;
+.colors-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: black;
+  height: 98vh;
+  padding: 0 10px 0 10px;
+  border-right: 1px solid white;
+}
+
+.peg,
+.colors-main button {
+  width: 9vh;
+  height: 9vh;
+  margin: 2px;
+  border-radius: 50%;
+}
+.peg:hover {
+  cursor: pointer;
 }
 
 .w-peg {
-  background-color: white;
+  @include button-shading(white);
+}
+.w-peg:hover {
 }
 
 .r-peg {
-  background-color: red;
+  @include button-shading(red);
 }
 
 .o-peg {
-  background-color: orange;
+  @include button-shading(orange);
 }
 
 .y-peg {
-  background-color: yellow;
+  @include button-shading(yellow);
 }
 
 .gn-peg {
-  background-color: green;
+  @include button-shading(green);
 }
 
 .b-peg {
-  background-color: blue;
+  @include button-shading(blue);
 }
 
 .p-peg {
-  background-color: purple;
+  @include button-shading(purple);
 }
 
 .g-peg {
-  background-color: gray;
+  @include button-shading(gray);
 }

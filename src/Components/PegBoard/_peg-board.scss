@@ -1,81 +1,112 @@
+.peg-board {
+  display: flex;
+}
 .grid {
   display: grid;
-  grid-template-columns: repeat(10, 10%);
-  grid-template-rows: repeat(10, 10%);
+  grid-template-columns: repeat(30, 3.4%);
+  width: 98vh;
+  height: 98vh;
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: black;
+  border-left: 1px solid white;
+  padding: 0 10px 0 10px;
+}
+
+.btn-box button {
+  width: 9vh;
+  height: 9vh;
+  margin: 2px;
+  border-radius: 50%;
+  color: red;
+  cursor: pointer;
+}
+
+.lightOn {
+  @include button-shading(yellow);
+  border: none;
+}
+.lightOff {
+  @include button-shading(orange);
+  border: none;
+}
+.reset {
+  background-color: black;
+  border: 1px solid white;
+  font-size: 1.8vh;
+}
+.reset:hover {
+  background-color: white;
+  border: 1px solid black;
 }
 
 #g {
   background-color: rgb(22, 22, 22);
 }
 #w {
-  background-color: lightgray;
+  @include peg-shading(lightgray);
 }
 #r {
-  background-color: red;
+  @include peg-shading(red);
 }
 #o {
-  background-color: orange;
+  @include peg-shading(orange);
 }
 #y {
-  background-color: yellow;
+  @include peg-shading(yellow);
 }
 #gn {
-  background-color: green;
+  @include peg-shading(green);
 }
 #b {
-  background-color: blue;
+  @include peg-shading(blue);
 }
 #p {
-  background-color: purple;
+  @include peg-shading(purple);
 }
 
 .hole-border {
-  width: 50px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
 .hole-border div {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin: auto;
-  margin-top: 5px;
-}
-.hole {
+  width: 70%;
+  height: 70%;
+  margin: 0;
 }
 
 #w.on {
-  background-color: white;
-  box-shadow: 0px 0px 20px white;
+  @include on-peg(white);
 }
 
 #r.on {
-  background-color: lighten(red, 10%);
-  box-shadow: 0px 0px 20px lighten(red, 20%);
+  @include on-peg(red);
 }
 
 #o.on {
-  background-color: lighten(orange, 10%);
-  box-shadow: 0px 0px 20px lighten(orange, 20%);
+  @include on-peg(orange);
 }
 
 #y.on {
-  background-color: lighten(yellow, 10%);
-  box-shadow: 0px 0px 20px lighten(yellow, 20%);
+  @include on-peg(yellow);
 }
 
 #gn.on {
-  background-color: lighten(green, 10%);
-  box-shadow: 0px 0px 20px lighten(green, 20%);
+  @include on-peg(green);
 }
 
 #b.on {
-  background-color: lighten(blue, 10%);
-  box-shadow: 0px 0px 20px lighten(blue, 20%);
+  @include on-peg(blue);
 }
 
 #p.on {
-  background-color: lighten(purple, 10%);
-  box-shadow: 0px 0px 20px lighten(purple, 20%);
+  @include on-peg(purple);
 }

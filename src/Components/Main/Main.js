@@ -11,7 +11,7 @@ class Main extends Component {
   }
 
   getInitialState = () => {
-    let holeGen = Array(95).fill("g");
+    let holeGen = Array(900).fill("g");
     const initialState = {
       onOrOff: false,
       currentColor: "g",
@@ -37,14 +37,21 @@ class Main extends Component {
     this.setState(this.getInitialState());
   };
 
+  // pointerChange = () => {
+  //   document.body.style.cursor = "pointer";
+  // };
+
   render() {
     return (
       <div className='main'>
         <div className='pegs-btns'>
           <Colors colorSelect={this.colorSelect} />
-          <button onClick={this.reset}>Reset</button>
         </div>
-        <PegBoard holes={this.state.holes} punch={this.punch} />
+        <PegBoard
+          holes={this.state.holes}
+          punch={this.punch}
+          reset={this.reset}
+        />
       </div>
     );
   }

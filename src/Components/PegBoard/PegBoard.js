@@ -10,11 +10,11 @@ class PegBoard extends Component {
 
   //turns the 'light' on and off which modifies the selector to include a box shadow and lightens the color of the 'pegs'
   onOrOff = () => {
-    console.log(this.state.onOrOff);
     this.setState({ onOrOff: !this.state.onOrOff });
   };
 
   render() {
+    const on = this.state.onOrOff ? "lightOn" : "lightOff";
     let board = this.props.holes.map((color, i) => {
       const getGlow =
         color !== "g" && this.state.onOrOff === true ? "on" : "off";
@@ -29,9 +29,16 @@ class PegBoard extends Component {
       );
     });
     return (
-      <div>
+      <div className='peg-board'>
         <div className='grid'>{board}</div>
-        <button onClick={this.onOrOff}>On/Off</button>
+        <div className='btn-box'>
+          <button onClick={this.onOrOff} className={on}>
+            {this.state.onOrOff ? "OFF" : "ON"}
+          </button>
+          <button onClick={() => this.props.reset()} className='reset'>
+            RESET
+          </button>
+        </div>
       </div>
     );
   }
