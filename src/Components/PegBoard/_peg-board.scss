@@ -25,7 +25,9 @@
   color: red;
   cursor: pointer;
 }
-
+button:focus {
+  outline: 0;
+}
 .lightOn {
   @include button-shading(yellow);
   border: none;
