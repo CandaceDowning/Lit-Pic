@@ -3,13 +3,17 @@ import Colors from "../Colors/Colors";
 import PegBoard from "../PegBoard/PegBoard";
 
 class Main extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     //current color tracked here
     //array holds the color of the holes
-    this.state = {
+    this.state = this.getInitialState();
+  }
+
+  getInitialState = () => {
+    const initialState = {
       onOrOff: false,
-      currentColor: "",
+      currentColor: "g",
       holes: [
         "g",
         "g",
@@ -113,7 +117,8 @@ class Main extends Component {
         "g"
       ]
     };
-  }
+    return initialState;
+  };
 
   //Lite Brite had pegs that you would punch through a paper template, so this function 'punches' the 'pegs' into place
   punch = i => {
@@ -129,110 +134,7 @@ class Main extends Component {
 
   //resets the array to all gray
   reset = () => {
-    this.setState({
-      holes: [
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g",
-        "g"
-      ]
-    });
+    this.setState(this.getInitialState());
   };
 
   render() {
