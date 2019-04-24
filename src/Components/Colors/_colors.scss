@@ -49,6 +49,10 @@
   @include button-shading(purple);
 }
 
+.pi-peg {
+  @include button-shading(hotpink);
+}
+
 .g-peg {
   @include button-shading(gray);
 }

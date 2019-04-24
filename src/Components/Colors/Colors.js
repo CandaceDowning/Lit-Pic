@@ -11,6 +11,7 @@ const Colors = props => {
       <div onClick={() => props.colorSelect("gn")} className='gn-peg peg' />
       <div onClick={() => props.colorSelect("b")} className='b-peg peg' />
       <div onClick={() => props.colorSelect("p")} className='p-peg peg' />
+      <div onClick={() => props.colorSelect("pi")} className='pi-peg peg' />
       <div onClick={() => props.colorSelect("g")} className='g-peg peg' />
     </div>
   );

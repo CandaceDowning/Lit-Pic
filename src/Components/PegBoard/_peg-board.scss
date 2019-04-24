@@ -71,6 +71,10 @@ button:focus {
   @include peg-shading(purple);
 }
 
+#pi {
+  @include peg-shading(hotpink);
+}
+
 .hole-border {
   display: flex;
   justify-content: center;
@@ -111,4 +115,8 @@ button:focus {
 
 #p.on {
   @include on-peg(purple);
+}
+
+#pi.on {
+  @include on-peg(rgb(243, 24, 134));
 }
