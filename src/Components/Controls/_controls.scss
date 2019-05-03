@@ -1,0 +1,69 @@
+.btn-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  border-left: 1px solid white;
+  padding: 0 10px 0 10px;
+  height: 98vh;
+  color: white;
+}
+.btn-box div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-box button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.reset {
+  border-radius: 50%;
+  background-color: black;
+  border: 1px solid white;
+  color: red;
+  font-size: 1.8vh;
+  width: 9vh;
+  height: 9vh;
+  margin: 2px;
+}
+.reset:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.light-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 7vh;
+  height: 11vh;
+  margin: 2px;
+  padding: 0;
+  border-radius: 5px;
+  .flipper {
+    background-color: purple;
+    width: 6.5vh;
+    height: 2.5vh;
+    margin: 0.5vh 0 0.5vh 0;
+    border-radius: 4px;
+  }
+}
+
+.lightOn {
+  border: none;
+  //   background-color: lighten(orange, 10%);
+  background-image: linear-gradient(orange 30%, lighten(orange, 30%));
+}
+
+.lightOff {
+  justify-content: flex-end;
+  border: none;
+  background-color: darken(orange, 15%);
+}

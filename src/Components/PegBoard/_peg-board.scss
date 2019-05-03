@@ -1,50 +1,63 @@
 .peg-board {
   display: flex;
+  background-color: black;
 }
+
+//at 2500 holes
+
+// .grid {
+//   display: grid;
+//   grid-template-columns: repeat(50, 2%);
+//   width: 120vh;
+//   height: 98vh;
+//   margin: 0 10px 0 10px;
+// }
+
+//at 1600 holes
+
+// .grid {
+//   display: grid;
+//   grid-template-columns: repeat(40, 2.5%);
+//   width: 120vh;
+//   height: 98vh;
+//   margin: 0 10px 0 10px;
+// }
+
+// at 900 holes
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(30, 3.4%);
+  grid-template-columns: repeat(30, 3.33%);
   width: 98vh;
   height: 98vh;
+  margin: 0 10px 0 10px;
 }
 
-.btn-box {
+//at 400 holes
+
+// .grid {
+//   display: grid;
+//   grid-template-columns: repeat(20, 5%);
+//   width: 120vh;
+//   height: 98vh;
+//   margin: 0 10px 0 10px;
+// }
+
+.hole-border {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   background-color: black;
-  border-left: 1px solid white;
-  padding: 0 10px 0 10px;
 }
 
-.btn-box button {
-  width: 9vh;
-  height: 9vh;
-  margin: 2px;
+.hole-border div {
   border-radius: 50%;
-  color: red;
-  cursor: pointer;
+  width: 80%;
+  height: 80%;
+  margin: 0;
 }
-button:focus {
-  outline: 0;
-}
-.lightOn {
-  @include button-shading(yellow);
-  border: none;
-}
-.lightOff {
-  @include button-shading(orange);
-  border: none;
-}
-.reset {
-  background-color: black;
-  border: 1px solid white;
-  font-size: 1.8vh;
-}
-.reset:hover {
-  background-color: white;
-  border: 1px solid black;
-}
+
+//colors holes based on color and light status
 
 #g {
   background-color: rgb(22, 22, 22);
@@ -73,20 +86,6 @@ button:focus {
 
 #pi {
   @include peg-shading(hotpink);
-}
-
-.hole-border {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-}
-
-.hole-border div {
-  border-radius: 50%;
-  width: 70%;
-  height: 70%;
-  margin: 0;
 }
 
 #w.on {

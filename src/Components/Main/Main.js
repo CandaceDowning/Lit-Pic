@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Colors from "../Colors/Colors";
 import PegBoard from "../PegBoard/PegBoard";
+import Controls from "../Controls/Controls";
 
 class Main extends Component {
   constructor(props) {
@@ -15,7 +16,8 @@ class Main extends Component {
     const initialState = {
       onOrOff: false,
       currentColor: "g",
-      holes: holeGen
+      holes: holeGen,
+      light: false
     };
     return initialState;
   };
@@ -30,6 +32,11 @@ class Main extends Component {
   //sets color clicked to the current color for punching into the peg board
   colorSelect = color => {
     this.setState({ currentColor: color });
+  };
+
+  //turns the 'light' on and off which modifies the selector to include a box shadow and lightens the color of the 'pegs'
+  onOrOff = () => {
+    this.setState({ light: !this.state.light });
   };
 
   //resets the array to all gray
@@ -49,8 +56,13 @@ class Main extends Component {
         </div>
         <PegBoard
           holes={this.state.holes}
+          light={this.state.light}
           punch={this.punch}
+        />
+        <Controls
           reset={this.reset}
+          onOrOff={this.onOrOff}
+          light={this.state.light}
         />
       </div>
     );

@@ -1,19 +1,38 @@
 .colors-main {
   display: flex;
   flex-direction: column;
+  height: 98vh;
+  width: 15vw;
   justify-content: space-around;
   background-color: black;
-  height: 98vh;
   padding: 0 10px 0 10px;
   border-right: 1px solid white;
+  color: white;
+}
+.directions {
+  background-color: purple;
+  border-radius: 10px;
+  margin: 10px 5px 10px 5px;
+  text-align: center;
+}
+.colors-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0 10px 0;
+  padding: 5px;
 }
 
 .peg,
 .colors-main button {
   width: 9vh;
   height: 9vh;
-  margin: 2px;
+  margin: 5%;
   border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 8vh;
 }
 .peg:hover {
   cursor: pointer;
