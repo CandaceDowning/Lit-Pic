@@ -9,6 +9,7 @@ const Colors = props => {
         <p>Click a color!</p>
         <p>Pick a spot!</p>
         <p>Flip the light!</p>
+        <p>Make a pic!</p>
       </div>
       <div className='colors-box'>
         <div onClick={() => props.colorSelect("w")} className='w-peg peg' />
