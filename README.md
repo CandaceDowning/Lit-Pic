@@ -6,4 +6,4 @@ Still in the prototype phase, but I wanted to see what it would take to recreate
 
 ### GO PLAY!
 
-You can try out the current version <a href='https://candacedowning.github.io/Lit-Pic/'>HERE</a>
+You can try out the current version <a href='https://candacedowning.github.io/Lit-Pic/' target='_blank' rel='noreferrer noopener'>HERE</a>
